@@ -2,8 +2,8 @@ import React from "react";
 
 import "./Button.css";
 
-const Button = ({content}) => {
-    return (<div className={`Button ${content === '0' ? 'zero' : ""}`}>{content}</div>);
+const Button = ({content, onButtonClick, type }) => {
+    return (<div className={`Button ${content === '0' ? 'zero' : ""} ${type || ""}`} onClick={onButtonClick(content)}>{content}</div>);
 };
 
 export default Button;
