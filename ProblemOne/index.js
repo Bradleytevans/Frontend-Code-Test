@@ -65,7 +65,7 @@ function mutateArray(a) {
         const objectChildren = guest[dataPoint];
         // *Creating new key to hold the sum of some_array
         objectChildren.some_total = 0;
-        // *Using forEach to run a function that sums up array
+        // *Using forEach to run a function that sums up
         objectChildren.some_array.forEach(function (item) {
           objectChildren.some_total += item;
         });
@@ -78,6 +78,13 @@ function mutateArray(a) {
       }
     });
   });
+  // *Using the filter method to create a new array
+  a = a.filter(function (type) {
+    let guests = 
+    // *Only returns arrays with correct guest_type of "guest"
+    type.guest_type === "guest";
+    return guests;
+  })
     return a;
 }
 
