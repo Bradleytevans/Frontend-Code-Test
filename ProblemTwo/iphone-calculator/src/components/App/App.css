@@ -1,0 +1,32 @@
+.App {
+    width: 640px;
+    height: 1136px;
+    background: black;
+    color: white;
+    
+}
+
+.top {
+height: 250px;
+padding: 0 20px;
+}
+
+.display {
+font-size: 130px;
+margin-bottom: 20px;
+font-weight: 300px;
+text-align: right;
+padding: 0 20px;
+}
+
+.buttons {
+display: grid;
+column-gap: 0px;
+grid-template-rows: repeat(5, 0fr);
+grid-template-columns: repeat(4, 0fr);
+}
+
+.clock {
+    text-align: center;
+    font-size: 20px;
+}
