@@ -28,3 +28,8 @@ grid-template-columns: repeat(4, 0fr);
 .bottom {
 
 }
+
+.clock {
+    text-align: center;
+    font-size: 20px;
+}
