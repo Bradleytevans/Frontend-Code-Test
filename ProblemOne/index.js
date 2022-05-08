@@ -56,6 +56,20 @@ var arr = [
 ];
 
 function mutateArray(a) {
+  // *Mapping over the array
+  a.map(function (guest) {
+    Object.keys(guest).map(function(dataPoint) {
+      //*Checking for objects in the array 
+      if (typeof guest[dataPoint] === 'object') {
+        // *Stores the contents of the object
+        const objectChildren = guest[dataPoint];
+        // *Deleting parent element
+        delete guest [dataPoint];
+        // *Combining contents of the objects with original array
+        guest = Object.assign(guest, objectChildren)
+      }
+    });
+  });
     return a;
 }
 
