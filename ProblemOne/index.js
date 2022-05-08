@@ -63,6 +63,14 @@ function mutateArray(a) {
       if (typeof guest[dataPoint] === 'object') {
         // *Stores the contents of the object
         const objectChildren = guest[dataPoint];
+        // *Creating new key to hold the sum of some_array
+        objectChildren.some_total = 0;
+        // *Using forEach to run a function that sums up array
+        objectChildren.some_array.forEach(function (item) {
+          objectChildren.some_total += item;
+        });
+        // *Deleting old array
+        delete objectChildren.some_array;
         // *Deleting parent element
         delete guest [dataPoint];
         // *Combining contents of the objects with original array
