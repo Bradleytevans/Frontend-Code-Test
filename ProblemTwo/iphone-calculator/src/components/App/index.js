@@ -9,8 +9,6 @@ const App = () => {
   const [memory, setMemory] = useState(null);
   const [operator, setOperator] = useState(null);
 
-  const math = setMemory(memory + parseFloat(value));
-  
   const handleButtonPress = (content) => () => {
     const num = parseFloat(value);
 
@@ -37,26 +35,26 @@ const App = () => {
       return;
     }
     if (content === "+") {
-      math;
+      setMemory(memory + parseFloat(value));
       setValue("0");
       setOperator("+");
       return;
     }
 
     if (content === "-") {
-      math;
+      setMemory(memory + parseFloat(value));
       setValue("0");
       setOperator("-");
       return;
     }
     if (content === "×") {
-      math;
+      setMemory(memory + parseFloat(value));
       setValue("0");
       setOperator("×");
       return;
     }
     if (content === "÷") {
-      math;
+      setMemory(memory + parseFloat(value));
 
       setValue("0");
       setOperator("÷");
