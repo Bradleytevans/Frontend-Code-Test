@@ -9,6 +9,22 @@ const App = () => {
   const [memory, setMemory] = useState(null);
   const [operator, setOperator] = useState(null);
 
+  const operations = () => {
+    if (operator !== null) {
+      if (operator === "+") {
+        setMemory(memory + parseFloat(value));
+      } else if (operator === "-") {
+        setMemory(memory + parseFloat(value));
+      } else if (operator === "×") {
+        setMemory(memory + parseFloat(value));
+      } else if (operator === "÷") {
+        setMemory(memory + parseFloat(value));
+      }
+    } else {
+      setMemory(parseFloat(value));
+    }
+  };
+
   const handleButtonPress = (content) => () => {
     const num = parseFloat(value);
 
@@ -35,27 +51,25 @@ const App = () => {
       return;
     }
     if (content === "+") {
-      setMemory(memory + parseFloat(value));
+      operations();
       setValue("0");
       setOperator("+");
       return;
     }
-
     if (content === "-") {
-      setMemory(memory + parseFloat(value));
+      operations();
       setValue("0");
       setOperator("-");
       return;
     }
     if (content === "×") {
-      setMemory(memory + parseFloat(value));
+      operations();
       setValue("0");
       setOperator("×");
       return;
     }
     if (content === "÷") {
-      setMemory(memory + parseFloat(value));
-
+      operations();
       setValue("0");
       setOperator("÷");
       return;
